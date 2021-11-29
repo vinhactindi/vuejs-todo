@@ -1,0 +1,111 @@
+@import "./reset.css";
+
+:root {
+  --primary: #4f6d7a;
+  --secondary: #0d0630;
+  --warning: #e8dab2;
+  --danger: #dd6e42;
+  --white: #fff;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+  padding: 15px;
+  margin: auto;
+  max-width: 720px;
+}
+
+h1 {
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+form {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+
+form > input[type="text"] {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+}
+
+input[type="text"] {
+  padding: 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 6px;
+  padding: 0;
+  margin: 0;
+  margin-right: 5px;
+}
+
+.button {
+  color: var(--white);
+  background-color: var(--primary);
+  font-size: 12px;
+  padding: 8px 18px;
+  border: none;
+  display: inline-block;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.button:hover {
+  box-shadow: none;
+  background-color: var(--secondary);
+}
+
+.button-small {
+  padding: 3px 9px;
+}
+
+.margin {
+  margin-bottom: 20px;
+}
+
+.todo-item {
+  margin-bottom: 10px;
+  height: 25px;
+}
+
+.todo-actions {
+  display: none;
+}
+
+.todo-item:hover {
+  font-weight: 600;
+}
+
+.todo-item:hover .todo-actions {
+  display: inline;
+}
+
+.danger-bg {
+  background-color: var(--danger);
+}
+
+.warning-bg {
+  background-color: var(--warning);
+}
