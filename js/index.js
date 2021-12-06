@@ -4,7 +4,7 @@ const STORAGE = window.localStorage;
 Vue.component("todo-form", {
   template: `
     <form @submit="submitAndClear(text)" action="#">
-      <input type="text" v-model="text" placeholder="入力してください"></input type="text">
+      <input type="text" v-model="text" placeholder="入力してください">
       <input class="button" type="submit" value="保存する" />
     </form>
   `,
