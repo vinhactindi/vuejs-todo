@@ -1,5 +1,4 @@
 const TODO_STORAGE = "todos";
-const STORAGE = window.localStorage;
 
 Vue.component("todo-form", {
   template: `
@@ -100,11 +99,11 @@ new Vue({
     },
   },
   mounted() {
-    if (STORAGE.getItem(TODO_STORAGE)) {
+    if (window.localStorage.getItem(TODO_STORAGE)) {
       try {
-        this.todos = JSON.parse(STORAGE.getItem(TODO_STORAGE));
+        this.todos = JSON.parse(window.localStorage.getItem(TODO_STORAGE));
       } catch (e) {
-        STORAGE.removeItem(TODO_STORAGE);
+        window.localStorage.removeItem(TODO_STORAGE);
       }
     } else {
       this.todos = [
@@ -120,7 +119,7 @@ new Vue({
       handler(todos) {
         const parsed = JSON.stringify(todos);
 
-        STORAGE.setItem(TODO_STORAGE, parsed);
+        window.localStorage.setItem(TODO_STORAGE, parsed);
       },
       deep: true,
     },
